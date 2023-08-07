@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StartActivity">
+    tools:context=".HomeActivity">
 
 
     <ScrollView
@@ -31,22 +31,15 @@
                     android:src="@drawable/topstartimage" />
 
                 <TextView
-                    android:layout_width="250dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:paddingTop="60dp"
+                    android:paddingTop="45dp"
                     android:textAlignment="center"
-                    android:text="Benvenuto su \nOrto verde"
+                    android:text="Hey *NomeUser*,\ncoltiviamo insieme per un mondo più ECO"
                     android:textSize="30dp" />
 
-                <!-- logo dell'app-->
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_alignParentEnd="true"
-                    android:paddingTop="25dp"
-                    android:paddingRight="25dp"
-                    android:src="@drawable/logo" />
+
             </RelativeLayout>
 
             <Space
@@ -57,7 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Accedi o registrati per sbloccare \ntutte le funzionalità."
+                android:text="Come procede l'orto ?"
                 android:textAlignment="center"
                 android:textSize="20dp" />
 
@@ -66,11 +59,11 @@
                 android:layout_height="10dp" />
 
             <Button
-                android:id="@+id/buttonLogin"
+                android:id="@+id/buttonIlMioOrto"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="LOG IN" />
+                android:text="vai all' orto" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -80,7 +73,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="oppure"
+                android:text="Non vuoi più coltivare?"
                 android:textSize="20dp" />
 
             <Space
@@ -88,11 +81,11 @@
                 android:layout_height="10dp" />
 
             <Button
-                android:id="@+id/buttonSignin"
+                android:id="@+id/buttonLogout"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="SIGN IN" />
+                android:text="LOGOUT" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -110,6 +103,4 @@
 
 
     </ScrollView>
-
-
 </android.support.constraint.ConstraintLayout>

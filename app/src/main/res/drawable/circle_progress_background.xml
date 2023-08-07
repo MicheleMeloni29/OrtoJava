@@ -1,0 +1,17 @@
+<!-- circle_progress_background_humidity.xml -->
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="ring"
+    android:useLevel="false"
+    android:innerRadiusRatio="2.5"
+    android:thicknessRatio="10.0">
+
+    <gradient
+        android:type="sweep"
+        android:startColor="@android:color/darker_gray"
+        android:endColor="@android:color/darker_gray"
+        android:angle="0" />
+    <size
+        android:width="100dp"
+        android:height="100dp" />
+</shape>

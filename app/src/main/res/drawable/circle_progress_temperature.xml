@@ -1,0 +1,24 @@
+<!-- circle_progress_temperature.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background"
+        android:drawable="@drawable/circle_progress_background" />
+
+    <item android:id="@android:id/progress">
+        <rotate
+            android:fromDegrees="270"
+            android:toDegrees="270">
+            <shape
+                android:shape="ring"
+                android:useLevel="true"
+                android:innerRadiusRatio="2.5"
+                android:thicknessRatio="10.0">
+
+                <gradient
+                    android:type="sweep"
+                    android:startColor="@color/yellow"
+                    android:endColor="@color/yellow"
+                    android:angle="0" />
+            </shape>
+        </rotate>
+    </item>
+</layer-list>
