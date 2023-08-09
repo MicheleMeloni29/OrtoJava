@@ -11,7 +11,7 @@
         android:theme="@style/Theme.PrototipoGruppoJazz">
         <activity
             android:name=".ModificaPasswordActivity"
-            android:exported="true" />
+            android:exported="true"/>
         <activity
             android:name=".sezionePiantaInseribileActivity"
             android:exported="true" />

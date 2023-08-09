@@ -18,44 +18,8 @@ public class sezionePiantaInseribileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sezione_pianta_inseribile);
 
-        ImageView optionsButton = findViewById(R.id.optionsButton);
+
         Button aggiungi=findViewById(R.id.aggiungiPianta);
-
-        optionsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PopupMenu popupMenu = new PopupMenu(sezionePiantaInseribileActivity.this, optionsButton);
-                popupMenu.inflate(R.menu.options_menu);
-
-                // Inflate custom layout for divider item
-                MenuInflater inflater = popupMenu.getMenuInflater();
-                inflater.inflate(R.menu.divider_menu, popupMenu.getMenu());
-
-                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem item) {
-                        // Handle menu item clicks
-                        switch (item.getItemId()) {
-                            case R.id.opzionePassword:
-                                Intent opzionePassword= new Intent(sezionePiantaInseribileActivity.this,ModificaPasswordActivity.class);
-                                startActivity(opzionePassword);
-                                return true;
-                            case R.id.opzioneNotifiche:
-                                // Handle option 2 click
-                                return true;
-                            case R.id.opzioneLogout:
-                                Intent opzioneLogout= new Intent(sezionePiantaInseribileActivity.this,StartActivity.class);
-                                startActivity(opzioneLogout);
-                                return true;
-                            default:
-                                return false;
-                        }
-                    }
-                });
-
-                popupMenu.show();
-            }
-        });
 
         aggiungi.setOnClickListener(new View.OnClickListener() {
             @Override

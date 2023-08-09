@@ -18,7 +18,7 @@ public class InserisciPiantaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inserisci_pianta);
 
-        GridLayout gridLayout = findViewById(R.id.gridLayout);
+        GridLayout gridLayout = findViewById(R.id.gridLayoutInserisci);
 
         int numElements = 9; // Replace this with the actual number of elements you want to display
         int numRows = (numElements + 2) / 3;
