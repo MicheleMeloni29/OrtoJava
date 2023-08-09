@@ -20,7 +20,7 @@ public class LoginActivity extends AppCompatActivity {
         loginBase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent login = new Intent(LoginActivity.this, HomeActivity.class);
+                Intent login = new Intent(LoginActivity.this, IlMioOrtoActivity.class);
 
                 startActivity(login);
             }

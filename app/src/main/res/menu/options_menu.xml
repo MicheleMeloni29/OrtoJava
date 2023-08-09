@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/opzionePassword"
+        android:title="Modifica password" />
+    <item
+        android:id="@+id/opzioneNotifiche"
+        android:title="Notifiche" />
+    <item
+        android:id="@+id/divider"
+        android:title=""
+        android:enabled="false"
+        android:actionLayout="@layout/divider_layout" />
+    <item
+        android:id="@+id/opzioneLogout"
+        android:title="Logout" />
+</menu>

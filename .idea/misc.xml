@@ -5,13 +5,23 @@
       <map>
         <entry key="..\:/Users/matte/AndroidStudioProjects/PrototipoGruppoJazz/app/src/main/res/drawable/circle_progress.xml" value="0.22777777777777777" />
         <entry key="..\:/Users/matte/AndroidStudioProjects/PrototipoGruppoJazz/app/src/main/res/drawable/circle_progress_backgroud.xml" value="0.22777777777777777" />
+        <entry key="..\:/Users/matte/AndroidStudioProjects/PrototipoGruppoJazz/app/src/main/res/drawable/circle_progress_background.xml" value="0.2712820512820513" />
         <entry key="..\:/Users/matte/AndroidStudioProjects/PrototipoGruppoJazz/app/src/main/res/drawable/circle_progress_background_temperature.xml" value="0.2324074074074074" />
+        <entry key="..\:/Users/matte/AndroidStudioProjects/PrototipoGruppoJazz/app/src/main/res/drawable/circle_progress_humidity.xml" value="0.2712820512820513" />
         <entry key="..\:/Users/matte/AndroidStudioProjects/PrototipoGruppoJazz/app/src/main/res/drawable/circle_progress_temperature.xml" value="0.2324074074074074" />
         <entry key="..\:/Users/matte/AndroidStudioProjects/PrototipoGruppoJazz/app/src/main/res/layout/activity_home.xml" value="0.259375" />
         <entry key="..\:/Users/matte/AndroidStudioProjects/PrototipoGruppoJazz/app/src/main/res/layout/activity_il_mio_orto.xml" value="0.259375" />
+        <entry key="..\:/Users/matte/AndroidStudioProjects/PrototipoGruppoJazz/app/src/main/res/layout/activity_inserisci_pianta.xml" value="0.1" />
         <entry key="..\:/Users/matte/AndroidStudioProjects/PrototipoGruppoJazz/app/src/main/res/layout/activity_login.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/matte/AndroidStudioProjects/PrototipoGruppoJazz/app/src/main/res/layout/activity_modifica_password.xml" value="0.17572463768115942" />
+        <entry key="..\:/Users/matte/AndroidStudioProjects/PrototipoGruppoJazz/app/src/main/res/layout/activity_sezione_pianta_inseribile.xml" value="0.2558876811594203" />
         <entry key="..\:/Users/matte/AndroidStudioProjects/PrototipoGruppoJazz/app/src/main/res/layout/activity_signin.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/matte/AndroidStudioProjects/PrototipoGruppoJazz/app/src/main/res/layout/activity_start.xml" value="0.1802536231884058" />
+        <entry key="..\:/Users/matte/AndroidStudioProjects/PrototipoGruppoJazz/app/src/main/res/layout/divider_layout.xml" value="0.17572463768115942" />
+        <entry key="..\:/Users/matte/AndroidStudioProjects/PrototipoGruppoJazz/app/src/main/res/layout/menu_item_with_divider.xml" value="0.16510416666666666" />
+        <entry key="..\:/Users/matte/AndroidStudioProjects/PrototipoGruppoJazz/app/src/main/res/layout/menu_item_without_divider.xml" value="0.16510416666666666" />
+        <entry key="..\:/Users/matte/AndroidStudioProjects/PrototipoGruppoJazz/app/src/main/res/menu/divider_menu.xml" value="0.259375" />
+        <entry key="..\:/Users/matte/AndroidStudioProjects/PrototipoGruppoJazz/app/src/main/res/menu/options_menu.xml" value="0.259375" />
       </map>
     </option>
   </component>

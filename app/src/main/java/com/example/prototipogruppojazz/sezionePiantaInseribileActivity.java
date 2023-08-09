@@ -3,35 +3,28 @@ package com.example.prototipogruppojazz;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 
-public class IlMioOrtoActivity extends AppCompatActivity {
-
-    Button aggiungi;
-    ImageView optionsButton;
-
-    /*da gestire la visualizzazione delle piante nell'orto se presenti o non*/
-    /*se non si hanno piante messe allora meglio far sparire la sezione*/
+public class sezionePiantaInseribileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_il_mio_orto);
+        setContentView(R.layout.activity_sezione_pianta_inseribile);
 
-        aggiungi=findViewById(R.id.buttonInserisciPianta);
-        optionsButton=findViewById(R.id.optionsButton);
-
+        ImageView optionsButton = findViewById(R.id.optionsButton);
+        Button aggiungi=findViewById(R.id.aggiungiPianta);
 
         optionsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopupMenu popupMenu = new PopupMenu(IlMioOrtoActivity.this, optionsButton);
+                PopupMenu popupMenu = new PopupMenu(sezionePiantaInseribileActivity.this, optionsButton);
                 popupMenu.inflate(R.menu.options_menu);
 
                 // Inflate custom layout for divider item
@@ -44,14 +37,14 @@ public class IlMioOrtoActivity extends AppCompatActivity {
                         // Handle menu item clicks
                         switch (item.getItemId()) {
                             case R.id.opzionePassword:
-                                Intent opzionePassword= new Intent(IlMioOrtoActivity.this,ModificaPasswordActivity.class);
+                                Intent opzionePassword= new Intent(sezionePiantaInseribileActivity.this,ModificaPasswordActivity.class);
                                 startActivity(opzionePassword);
                                 return true;
                             case R.id.opzioneNotifiche:
                                 // Handle option 2 click
                                 return true;
                             case R.id.opzioneLogout:
-                                Intent opzioneLogout= new Intent(IlMioOrtoActivity.this,StartActivity.class);
+                                Intent opzioneLogout= new Intent(sezionePiantaInseribileActivity.this,StartActivity.class);
                                 startActivity(opzioneLogout);
                                 return true;
                             default:
@@ -64,23 +57,13 @@ public class IlMioOrtoActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
         aggiungi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent login = new Intent(IlMioOrtoActivity.this, InserisciPiantaActivity.class);
-
-                startActivity(login);
+                //gestire l'aggiunta di una pianta
+                Intent aggiungi=new Intent(sezionePiantaInseribileActivity.this, IlMioOrtoActivity.class);
+                startActivity(aggiungi);
             }
         });
-
-
-
-
     }
-
-
 }

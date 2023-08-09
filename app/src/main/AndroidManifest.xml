@@ -10,10 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PrototipoGruppoJazz">
         <activity
-            android:name=".IlMioOrtoActivity"
+            android:name=".ModificaPasswordActivity"
             android:exported="true" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".sezionePiantaInseribileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".InserisciPiantaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".IlMioOrtoActivity"
             android:exported="true" />
         <activity
             android:name=".SigninActivity"
