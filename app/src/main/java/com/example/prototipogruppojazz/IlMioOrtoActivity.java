@@ -3,7 +3,7 @@ package com.example.prototipogruppojazz;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -100,20 +100,21 @@ public class IlMioOrtoActivity extends AppCompatActivity {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
                         // Handle menu item clicks
-                        switch (item.getItemId()) {
-                            case R.id.opzionePassword:
-                                Intent opzionePassword= new Intent(IlMioOrtoActivity.this,ModificaPasswordActivity.class);
-                                startActivity(opzionePassword);
-                                return true;
-                            case R.id.opzioneNotifiche:
-                                // Handle option 2 click
-                                return true;
-                            case R.id.opzioneLogout:
-                                Intent opzioneLogout= new Intent(IlMioOrtoActivity.this,StartActivity.class);
-                                startActivity(opzioneLogout);
-                                return true;
-                            default:
-                                return false;
+                        int id = item.getItemId();
+
+                        if (id == R.id.opzionePassword) {
+                            Intent opzionePassword = new Intent(IlMioOrtoActivity.this, ModificaPasswordActivity.class);
+                            startActivity(opzionePassword);
+                            return true;
+                        } else if (id == R.id.opzioneNotifiche) {
+                            // Handle opzioneNotifiche
+                            return true;
+                        } else if (id == R.id.opzioneLogout) {
+                            Intent opzioneLogout = new Intent(IlMioOrtoActivity.this, StartActivity.class);
+                            startActivity(opzioneLogout);
+                            return true;
+                        } else {
+                            return false;
                         }
                     }
                 });

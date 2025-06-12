@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,109 +7,90 @@
     tools:context=".StartActivity">
 
 
-    <ScrollView
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:scrollbars="vertical">
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
+            <!-- SEZIONE SUPERIORE CON SFONDO UNIFICATO -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:paddingTop="128dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@color/cardview_dark_background"
+                android:gravity="center_horizontal">
 
-                <ImageView
-                    android:id="@+id/topstartimage"
+                <!-- Header con titolo + logo -->
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_centerInParent="true"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/topstartimage" />
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="36dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Benvenuto su\nOrto verde"
+                        android:textColor="#36A266"
+                        android:textSize="36sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/logo"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/logo_app"
+                        android:scaleType="centerCrop"
+                        android:layout_marginStart="16dp"/>
+                </LinearLayout>
+
+                <!-- Descrizione -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Accedi o registrati per sbloccare\ntutte le funzionalità."
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textColor="#36A266"
+                    android:layout_marginTop="124dp"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Bottoni -->
+                <Button
+                    android:id="@+id/buttonLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Log In"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#36A266"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="12dp" />
 
                 <TextView
-                    android:layout_width="250dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:paddingTop="60dp"
-                    android:textAlignment="center"
-                    android:text="Benvenuto su \nOrto verde"
-                    android:textSize="30dp" />
+                    android:text="oppure"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="12dp" />
 
-                <!-- logo dell'app-->
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_alignParentEnd="true"
-                    android:paddingTop="25dp"
-                    android:paddingRight="25dp"
-                    android:src="@drawable/logo" />
-            </RelativeLayout>
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="10dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Accedi o registrati per sbloccare \ntutte le funzionalità."
-                android:textAlignment="center"
-                android:textSize="20dp" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="10dp" />
-
-            <Button
-                android:id="@+id/buttonLogin"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="LOG IN" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="10dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="oppure"
-                android:textSize="20dp" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="10dp" />
-
-            <Button
-                android:id="@+id/buttonSignin"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="SIGN IN" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="10dp" />
-
-            <ImageView
-                android:id="@+id/bottomstartimage"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/bottomstartimage" />
-
-
-        </LinearLayout>
-
-
+                <Button
+                    android:id="@+id/buttonSignin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Registrati"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#FFFFFF"
+                    android:textColor="#36A266" />
+            </LinearLayout>
     </ScrollView>
 
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
