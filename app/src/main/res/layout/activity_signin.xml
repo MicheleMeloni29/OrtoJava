@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,137 +9,142 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:scrollbars="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:paddingTop="20dp"
-                android:textAlignment="center"
-                android:layout_gravity="center"
-                android:text="Inserisci i tuoi dati"
-                android:textSize="30dp" />
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="10dp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/editUsername"
-                android:hint="Username"
-                android:textSize="25dp"
-                android:layout_gravity="center"
-                android:text="" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="10dp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/editEmail"
-                android:hint="Email"
-                android:textSize="25dp"
-                android:layout_gravity="center"
-                android:text="" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="10dp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/editPassword1"
-                android:hint="Password"
-                android:textSize="25dp"
-                android:layout_gravity="center"
-                android:text=""
-                android:inputType="textPassword"/>
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="10dp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/editPassword2"
-                android:hint="Ripeti password"
-                android:textSize="25dp"
-                android:layout_gravity="center"
-                android:text=""
-                android:inputType="textPassword"/>
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="10dp" />
+            android:paddingTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@color/cardview_dark_background"
+            android:gravity="center_horizontal">
 
             <Button
-                android:id="@+id/buttonSigninBase"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="SIGNIN" />
-
-            <Space
+                android:id="@+id/buttonBack"
                 android:layout_width="wrap_content"
-                android:layout_height="20dp" />
+                android:layout_height="wrap_content"
+                android:text="Indietro"
+                android:layout_gravity="left"
+                android:layout_marginTop="16dp"
+                android:textAllCaps="false"
+                android:backgroundTint="#36A266"
+                android:textColor="#FFFFFF" />
 
+            <!-- Titolo -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:layout_gravity="center"
-                android:text="oppure"
-                android:textSize="15dp" />
+                android:text="Registrati"
+                android:textColor="#36A266"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:paddingTop="60dp"
+                android:layout_marginBottom="36dp" />
 
-            <Space
+            <!-- Campo Username -->
+            <EditText
+                android:id="@+id/editUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:padding="12dp"
+                android:textColorHint="#999999"
+                android:backgroundTint="#36A266"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Campo Email -->
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:padding="12dp"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#999999"
+                android:backgroundTint="#36A266"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Campo Password -->
+            <EditText
+                android:id="@+id/editPassword1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:padding="12dp"
+                android:inputType="textPassword"
+                android:textColorHint="#999999"
+                android:backgroundTint="#36A266"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Campo Ripeti Password -->
+            <EditText
+                android:id="@+id/editPassword2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ripeti password"
+                android:padding="12dp"
+                android:inputType="textPassword"
+                android:textColorHint="#999999"
+                android:backgroundTint="#36A266"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="36dp" />
+
+            <!-- Bottone Sign In -->
+            <Button
+                android:id="@+id/buttonSigninBase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registrati"
+                android:textAllCaps="false"
+                android:backgroundTint="#36A266"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Separatore -->
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="20dp" />
+                android:layout_height="wrap_content"
+                android:text="oppure"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Login Social -->
+            <Button
+                android:id="@+id/buttonSigninGoogle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registrati con Google"
+                android:textAllCaps="false"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#36A266"
+                android:layout_marginBottom="12dp" />
 
             <Button
                 android:id="@+id/buttonSigninFacebook"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="SIGNIN WITH FACEBOOK" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="10dp" />
+                android:text="Registrati con Facebook"
+                android:textAllCaps="false"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#36A266"
+                android:layout_marginBottom="12dp" />
 
             <Button
                 android:id="@+id/buttonSigninTwitter"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="SIGNIN WITH TWITTER" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="10dp" />
-
-            <Button
-                android:id="@+id/buttonSigninGoogle"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="SIGNIN WITH GOOGLE" />
-
-
-
+                android:text="Registrati con Twitter"
+                android:textAllCaps="false"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#36A266"
+                android:layout_marginBottom="24dp" />
         </LinearLayout>
-
-
     </ScrollView>
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
