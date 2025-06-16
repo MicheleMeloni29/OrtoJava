@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
-    EditText editEmail, editPassword;
+    EditText editUsername, editPassword;
     Button loginBase, backButton;
 
     @Override
@@ -20,35 +20,34 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        editEmail = findViewById(R.id.editEmail);
+        editUsername = findViewById(R.id.editUsername);
         editPassword = findViewById(R.id.editPassword1);
         loginBase = findViewById(R.id.buttonLoginBase);
-        backButton = findViewById(R.id.buttonBack); // Assicurati di avere questo bottone nel layout
+        backButton = findViewById(R.id.buttonBack);
 
         loginBase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String inputUsername = editEmail.getText().toString().trim();
+                String inputUsername = editUsername.getText().toString().trim();
                 String inputPassword = editPassword.getText().toString().trim();
 
-                SharedPreferences prefs = getSharedPreferences("UserPrefs", MODE_PRIVATE);
-                String savedUsername = prefs.getString("username", null);
-                String savedPassword = prefs.getString("password", null);
-
-                if (savedUsername == null || savedPassword == null) {
-                    Toast.makeText(LoginActivity.this, "Nessun utente registrato", Toast.LENGTH_SHORT).show();
+                if (inputUsername.isEmpty() || inputPassword.isEmpty()) {
+                    Toast.makeText(LoginActivity.this, "Inserisci username e password", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                if (inputUsername.equals(savedUsername) && inputPassword.equals(savedPassword)) {
-                    Toast.makeText(LoginActivity.this, "Login effettuato!", Toast.LENGTH_SHORT).show();
+                SharedPreferences prefs = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+                String savedUsername = prefs.getString("username", "");
+                String savedPassword = prefs.getString("password", "");
 
-                    // Vai a IlMioOrtoActivity
-                    Intent orto = new Intent(LoginActivity.this, IlMioOrtoActivity.class);
-                    startActivity(orto);
+                if (inputUsername.equals(savedUsername) && inputPassword.equals(savedPassword)) {
+                    Toast.makeText(LoginActivity.this, "Login effettuato con successo", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(LoginActivity.this, IlMioOrtoActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
                     finish();
                 } else {
-                    Toast.makeText(LoginActivity.this, "Username o password errati", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Credenziali errate", Toast.LENGTH_SHORT).show();
                 }
             }
         });

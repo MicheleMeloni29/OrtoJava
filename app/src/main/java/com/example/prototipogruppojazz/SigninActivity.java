@@ -23,7 +23,7 @@ public class SigninActivity extends AppCompatActivity {
         // Associa i campi
         registratiBase = findViewById(R.id.buttonSigninBase);
         editUsername = findViewById(R.id.editUsername);
-        editEmail = findViewById(R.id.editEmail); // anche se non usato per il login
+        editEmail = findViewById(R.id.editEmail);
         editPassword1 = findViewById(R.id.editPassword1);
         editPassword2 = findViewById(R.id.editPassword2);
         backButton = findViewById(R.id.buttonBack);
@@ -32,10 +32,11 @@ public class SigninActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String username = editUsername.getText().toString().trim();
+                String email = editEmail.getText().toString().trim();
                 String password1 = editPassword1.getText().toString().trim();
                 String password2 = editPassword2.getText().toString().trim();
 
-                if (username.isEmpty() || password1.isEmpty() || password2.isEmpty()) {
+                if (username.isEmpty() || email.isEmpty() || password1.isEmpty() || password2.isEmpty()) {
                     Toast.makeText(SigninActivity.this, "Compila tutti i campi", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -46,8 +47,8 @@ public class SigninActivity extends AppCompatActivity {
                 }
 
                 // Salva le credenziali
-                SharedPreferences prefs = getSharedPreferences("UserPrefs", MODE_PRIVATE);
-                SharedPreferences.Editor editor = prefs.edit();
+                SharedPreferences preferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
                 editor.putString("username", username);
                 editor.putString("password", password1);
                 editor.apply();
@@ -55,8 +56,7 @@ public class SigninActivity extends AppCompatActivity {
                 Toast.makeText(SigninActivity.this, "Registrazione completata!", Toast.LENGTH_SHORT).show();
 
                 // Torna alla schermata di login o start
-                Intent login = new Intent(SigninActivity.this, StartActivity.class);
-                startActivity(login);
+                startActivity(new Intent(SigninActivity.this, StartActivity.class));
                 finish();
             }
         });

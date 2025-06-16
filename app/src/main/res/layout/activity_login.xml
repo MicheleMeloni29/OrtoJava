@@ -30,6 +30,7 @@
                 android:layout_gravity="left"
                 android:layout_marginTop="16dp"
                 android:textAllCaps="false"
+                android:background="@drawable/rounded_botton"
                 android:backgroundTint="#36A266"
                 android:textColor="#FFFFFF" />
 
@@ -46,10 +47,10 @@
 
             <!-- Campo Email -->
             <EditText
-                android:id="@+id/editEmail"
+                android:id="@+id/editUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Email"
+                android:hint="Username"
                 android:inputType="textEmailAddress"
                 android:padding="12dp"
                 android:textColorHint="#999999"
@@ -77,6 +78,7 @@
                 android:layout_height="wrap_content"
                 android:text="Log In"
                 android:textAllCaps="false"
+                android:background="@drawable/rounded_botton"
                 android:backgroundTint="#36A266"
                 android:textColor="#FFFFFF"
                 android:layout_marginBottom="24dp" />
@@ -97,6 +99,7 @@
                 android:layout_height="wrap_content"
                 android:text="Login con Google"
                 android:textAllCaps="false"
+                android:background="@drawable/rounded_botton"
                 android:backgroundTint="#FFFFFF"
                 android:textColor="#36A266"
                 android:layout_marginBottom="12dp" />
@@ -107,6 +110,7 @@
                 android:layout_height="wrap_content"
                 android:text="Login con Facebook"
                 android:textAllCaps="false"
+                android:background="@drawable/rounded_botton"
                 android:backgroundTint="#FFFFFF"
                 android:textColor="#36A266"
                 android:layout_marginBottom="12dp" />
@@ -117,6 +121,7 @@
                 android:layout_height="wrap_content"
                 android:text="Login con Twitter"
                 android:textAllCaps="false"
+                android:background="@drawable/rounded_botton"
                 android:backgroundTint="#FFFFFF"
                 android:textColor="#36A266"
                 android:layout_marginBottom="24dp" />
